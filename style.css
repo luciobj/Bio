@@ -1,0 +1,22 @@
+body {
+  background-color: #042A2B;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white
+  }
+#foto { 
+  border-radius: 100%;
+  justify-content: right;
+  }
+h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2cm;
+  text-align: center;
+  }
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: justify; 
+  border-width: 2cm;
+  border-radius: 5cm;
+  font-style: italic;
+  }
+  
