@@ -1,0 +1,61 @@
+body {
+  background-color: #042A2B;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  background-image: ;
+  }
+
+#foto { 
+  position: static;
+  border-radius: 100%;
+  justify-content: right;
+  Display: inline-block;
+  Margin-left: 60%
+  }
+#indice 
+  {
+  text-decoration: none;
+  position: relative;
+  left: 180px;
+  border: 3px solid black;
+  width: 300px;
+  resize: both;
+  }
+
+#habil 
+  {
+  border: 3px solid black;
+  width: 650px;
+  resize: both;
+  }
+
+#links
+  {
+    text-align:center;
+    text-decoration: none;
+  }
+
+h1 {
+  background-color: #413D40;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5cm;
+  text-align: center;
+  border-radius: 3cm;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  }
+
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: justify;
+  font-style: italic;
+  position: relative;
+  left: 670px;
+  width: 500px;
+  resize: both;
+  }
+
+h3 {
+  background-color: #931119;
+  }
