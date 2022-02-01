@@ -1,10 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap') ;
+
+:root {
+
+  --primary_color: rgb(29, 187, 164);
+
+  --hover_primary_color: rgb(25, 152, 134);
+
+  --secondary_color: rgb(50, 55, 62);
+
+  --alt_secondary_color: rgb(96, 105, 117);
+}
+
+* {
+  font-family: Raleway , sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.game-header-off {
+  display: none;
+}
+
+.game-header-on {
+  background-color: var(--primary_color);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.game-header-content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+}
+
+.game-header-content span {
+  color: white;
+  font-size: 35px;
+  font-weight: 800;
+  margin-right: 50px;
+}
+
+.game-header-icon {
+  height: 40px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  position: relative;
+  top: -50px;
 }
 
 .red-border {
@@ -17,24 +66,20 @@
 
 @media ( prefers-reduced-motion : no-preference ) {
 
-  .App-logo {
+  .logo {
     animation: shake infinite 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
 }
 
-.App-header {
+.main-container {
   align-items: center;
-  background-color: #282c34;
+  background-color: var(--secondary_color);
   color: white;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   justify-content: center;
   min-height: 100vh;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes shake {
@@ -54,4 +99,304 @@
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+
+.system-btn {
+  background-color: var(--primary_color);
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+  font-family: Raleway , sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  height: 60px;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.system-btn:hover {
+  font-size: 45px;
+  transform-origin: center center;
+  transition: all 0.3s;
+}
+
+.system-btn:active {
+  background-color: var(--hover_primary_color);
+  transition: all 0.3s;
+}
+
+.input-div {
+  display: flex;
+  font-family: Raleway , sans-serif;
+  margin: 10px;
+}
+
+.input, .select {
+  border-radius: 10px;
+  font-size: 25px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 5px;
+  width: 350px;
+}
+
+.config-icon {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  transform-origin: center center;
+}
+
+@media ( prefers-reduced-motion : no-preference ) {
+
+  .config-icon:hover {
+    animation: rotate infinite 5s linear;
+  }
+
+  .loading-icon {
+    animation: rotate infinite 5s linear;
+  }
+}
+
+@keyframes rotate {
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.play-btn {
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+}
+
+.ranking-btn {
+  bottom: 3%;
+  position: absolute;
+  right: 3%;
+}
+
+.config-title {
+  color: var(--primary_color);
+  display: flex;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 100px;
+}
+
+.config-title h1 {
+  margin-left: 20px;
+}
+
+.select {
+  height: 40px;
+  justify-content: space-between;
+}
+
+.select-container {
+  display: flex;
+}
+
+.config-subtitles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.config-subtitles p {
+  margin-bottom: 55px;
+}
+
+.config-selects {
+  display: flex;
+  flex-direction: column;
+}
+
+.config-selects select {
+  margin-bottom: 50px;
+}
+
+.feedback-container {
+  align-items: center;
+  background-color: var(--alt_secondary_color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  text-align: center;
+}
+
+.feedback-msg {
+  color: var(--primary_color);
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.play-again-btn {
+  margin-top: 30px;
+}
+
+.question-container {
+  background-color: var(--secondary_color);
+  display: flex;
+  justify-content: center;
+}
+
+.question {
+  align-items: center;
+  background-color: var(--secondary_color);
+  background-image: url('question-shape.svg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px;
+  min-width: 650px;
+
+}
+
+.quiz-container {
+  align-items: center;
+  background-color: var(--secondary_color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.category {
+  color: var(--primary_color);
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.question-text {
+  font-size: 30px;
+  font-weight: 500;
+  max-width: 35rem;
+  text-align: center;
+}
+
+.timer {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+}
+
+
+.score {
+  align-items: center;
+  background-color: var(--primary_color);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  font-size: 30px;
+  font-weight: 800;
+  height: 55px;
+  justify-content: center;
+  margin: 20px 0;
+  min-width: 200px;
+}
+
+
+.timer-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+
+.answers-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 950px;
+}
+
+.answers-container button {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-size: 26px;
+  height: 65px;
+  margin: 10px;
+  min-width: 450px;
+}
+
+.next-btn {
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.ranking-header {
+  align-items: center;
+  background-color: var(--primary_color);
+  display: flex;
+  font-size: 35px;
+  font-weight: 800;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.ranking-list {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  max-height: 70vh;
+  overflow-y: scroll;
+  width: 85vw;
+}
+
+.ranking-list::-webkit-scrollbar {
+  background-color: white;
+  border-radius: 10px;
+  width: 20px;
+}
+
+.ranking-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary_color);
+  border-radius: 10px;
+}
+
+.ranking-list li {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 5px;
+}
+
+.podium-number {
+  font-weight: 800;
+}
+
+.player-position {
+  display: flex;
+  margin-left: 50px;
+}
+
+.player-position div {
+  margin-left: 30px;
+}
+
+.player-score {
+  margin-right: 50px;
+}
+
+.home-btn {
+  margin-top: 30px;
+}
+
+.loading {
+  font-size: 50px;
+  font-weight: 800;
 }
